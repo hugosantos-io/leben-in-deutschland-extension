@@ -4,7 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.0.5](https://github.com/hugosantos-io/leben-in-deutschland-extension/compare/v1.0.4...v1.0.5) (2025-05-09)
 
-
 ### Bug Fixes
 
 * configure jest and typescript for tests ([3b463e6](https://github.com/hugosantos-io/leben-in-deutschland-extension/commit/3b463e69e79ade8a196505c20cb716a153145527))
