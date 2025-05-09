@@ -13,7 +13,7 @@ const generateRandomNumber = (min: number, max: number): number => {
 const logPageInfo = (): void => {
     try {
         const randomNumber = generateRandomNumber(1, 10000);
-        logger.info('BAMF page detected', { randomNumber });
+        logger.info('Question page detected', { randomNumber });
     } catch (error) {
         logger.error('Error in logPageInfo', error);
     }
