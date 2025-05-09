@@ -51,16 +51,19 @@ A Chrome extension that reads Leben in Deutschland page and logs information to 
 ## Development Setup
 
 1. Install dependencies:
+
    ```bash
    npm install
    ```
 
 2. Development mode with hot reload:
+
    ```bash
    npm run dev
    ```
 
 3. Production build:
+
    ```bash
    npm run prod
    ```
@@ -74,6 +77,7 @@ A Chrome extension that reads Leben in Deutschland page and logs information to 
 ## Build Process
 
 The build process using Webpack:
+
 1. Compiles TypeScript to JavaScript
 2. Bundles all JavaScript files
 3. Processes CSS files
@@ -103,3 +107,25 @@ Each log message includes:
 - Log level
 - Message
 - Optional data object
+
+## Commit Types
+
+The project follows the Conventional Commits specification. Here are the allowed commit types:
+
+- `feat`: new features
+- `fix`: bug fixes
+- `docs`: documentation changes
+- `style`: style changes
+- `refactor`: code refactoring
+- `perf`: performance improvements
+- `test`: test changes
+- `build`: build system changes
+- `ci`: CI configuration changes
+- `chore`: maintenance tasks
+- `revert`: revert commits
+
+Example commit message:
+
+```plain
+feat(logger): add debug level and configurable log levels
+```

@@ -14,12 +14,14 @@
         "baseUrl": ".",
         "paths": {
             "@/*": ["src/*"]
-        }
+        },
+        "types": ["node", "jest"]
     },
     "include": [
         "src/**/*.ts",
         "src/**/*.tsx",
-        "tests/**/*.ts"
+        "tests/**/*.ts",
+        "scripts/**/*.ts"
     ],
     "exclude": ["node_modules"]
 } 
