@@ -1,6 +1,6 @@
 {
   "name": "leben-in-deutschland-extension",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Leben in Deutschland Extension",
   "type": "module",
   "author": {
@@ -27,9 +27,9 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "version:patch": "standard-version --release-as patch",
-    "version:minor": "standard-version --release-as minor",
-    "version:major": "standard-version --release-as major"
+    "version:patch": "standard-version --release-as patch --message \"chore(release): bump version to %s\"",
+    "version:minor": "standard-version --release-as minor --message \"chore(release): bump version to %s\"",
+    "version:major": "standard-version --release-as major --message \"chore(release): bump version to %s\""
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
