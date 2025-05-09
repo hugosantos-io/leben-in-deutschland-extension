@@ -10,12 +10,16 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "outDir": "./dist",
-        "rootDir": "./src",
+        "rootDir": ".",
         "baseUrl": ".",
         "paths": {
             "@/*": ["src/*"]
         }
     },
-    "include": ["src/**/*.ts"],
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "tests/**/*.ts"
+    ],
     "exclude": ["node_modules"]
 } 

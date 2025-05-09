@@ -17,7 +17,14 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                use: 'ts-loader',
+                use: {
+                    loader: 'ts-loader',
+                    options: {
+                        compilerOptions: {
+                            sourceMap: false
+                        }
+                    }
+                },
                 exclude: /node_modules/
             },
             {
@@ -42,7 +49,7 @@ module.exports = {
     plugins: [
         new CopyPlugin({
             patterns: [
-                { from: 'manifest.json', to: 'manifest.json' },
+                { from: 'src/manifest.json', to: 'manifest.json' },
                 { from: 'assets', to: 'assets' },
                 { from: 'src/_locales', to: '_locales' }
             ]
@@ -54,6 +61,10 @@ module.exports = {
         })
     ],
     optimization: {
-        minimize: true
-    }
+        minimize: true,
+        moduleIds: 'deterministic',
+        runtimeChunk: false,
+        splitChunks: false
+    },
+    devtool: false
 }; 

@@ -1,9 +1,13 @@
 {
   "manifest_version": 3,
   "name": "Leben in Deutschland Extension",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Leben in Deutschland Extension",
-  "permissions": ["activeTab"],
+  "default_locale": "en",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -25,11 +29,11 @@
   "content_scripts": [
     {
       "matches": ["https://oet.bamf.de/ords/oetut/f?p=534:30::::::"],
-      "js": ["dist/content/content.js"]
+      "js": ["content.js"]
     }
   ],
   "web_accessible_resources": [{
-    "resources": ["dist/utils/*"],
-    "matches": ["https://oet.bamf.de/ords/oetut/f?p=534:30::::::"]
+    "resources": ["utils/*"],
+    "matches": ["https://oet.bamf.de/*"]
   }]
 } 

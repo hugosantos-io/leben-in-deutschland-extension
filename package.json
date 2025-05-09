@@ -2,19 +2,35 @@
   "name": "leben-in-deutschland-extension",
   "version": "1.0.0",
   "description": "Leben in Deutschland Extension",
+  "type": "module",
+  "author": {
+    "name": "Hugo Santos",
+    "email": "hugoasantos@gmail.com",
+    "url": "https://github.com/hugosantos-io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugosantos-io/leben-in-deutschland-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hugosantos-io/leben-in-deutschland-extension/issues"
+  },
+  "homepage": "https://github.com/hugosantos-io/leben-in-deutschland-extension#readme",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "watch": "webpack --config webpack.config.js --watch",
+    "build": "webpack --config webpack.config.cjs",
+    "watch": "webpack --config webpack.config.cjs --watch",
     "clean": "rimraf dist",
-    "lint": "eslint . --ext .ts,.tsx --max-warnings=0",
-    "dev": "webpack --config webpack.config.js --mode development --watch",
+    "lint": "eslint src --ext .ts,.tsx --max-warnings=0",
+    "dev": "webpack --config webpack.config.cjs --mode development --watch",
     "prepare": "husky",
-    "prod": "webpack --config webpack.config.js --mode production",
+    "prod": "webpack --config webpack.config.cjs --mode production",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@types/chrome": "^0.0.260",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.24",
@@ -30,6 +46,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^15.5.2",
     "rimraf": "^5.0.5",
+    "standard-version": "^9.5.0",
     "style-loader": "^3.3.4",
     "ts-jest": "^29.1.2",
     "ts-loader": "^9.5.1",
